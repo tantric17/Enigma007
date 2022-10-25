@@ -36,7 +36,7 @@ NodeJS, ExpressJS, PostgreSQL
 
 ## Libraries Used:
 
-path, bcrypt, passport, express-flash, express-session, dotenv, passport-local
+path, bcrypt, passport, express-flash, express-session, dotenv, passport-local, cookie-parser
 
 # Local Setup
 
