@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Team Events</div>
+    <ul>
+      <% if(typeof errors !='undefined' ) { %>
+        <% errors.forEach(error=>{ %>
+          <li>
+            <%= error.message %>
+          </li>
+          <% }) %>
+            <% } %>
+    </ul>
+    <form action="/tevents" method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <label for="username"><span class="details">Username</span></label>
+          <input class="input" type="text" placeholder="Enter your username" name="username" required>
+        </div>
+        <div class="input-box">
+          <label for="tname"><span class="details">Team Name</span></label>
+          <input class="input" type="text" placeholder="Enter the team name" name="tname" required>
+        </div>
+        <div class="input-box">
+          <label for="tleader"><span class="details">Team Leader</span></label>
+          <input class="input" type="text" placeholder="Enter the team leader name" name="tleader" required>
+        </div>
+        <div class="input-box">
+          <label for="tmember"><span class="details">Total Members</span></label>
+          <input class="input" type="integer" placeholder="Enter the number of members" name="tmember" required>
+        </div>
+        <div class="input-box">
+          <label for="teamevent"><span class="details">Choose Event</span></label>
+          <select class="input-i" name="teamevent" required>
+            <option value="VALORANT">VALORANT</option>
+            <option value="CS: GO">CS: GO</option>
+            <option value="COD">COD</option>
+            <option value="ROBOWARS">ROBOWARS</option>
+            <option value="DRONE RACING">DRONE RACING</option>
+            <option value="ANDROID">ANDROID</option>
+            <option value="WEB">WEB</option>
+            <option value="BLOCKCHAIN">BLOCKCHAIN</option>
+            <option value="FUSION">FUSION</option>
+          </select>
+        </div>
+      <div class="button">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>

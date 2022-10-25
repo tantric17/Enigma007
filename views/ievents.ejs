@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Individual Events</div>
+    <ul>
+      <% if(typeof errors !='undefined' ) { %>
+        <% errors.forEach(error=>{ %>
+          <li>
+            <%= error.message %>
+          </li>
+          <% }) %>
+            <% } %>
+    </ul>
+    <form action="/ievents" method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <label for="username"><span class="details">Username</span></label>
+          <input class="input" type="text" placeholder="Enter your username" name="username" required>
+        </div>
+        <div class="input-box">
+          <label for="indevent"><span class="details">Choose Event</span></label>
+          <select class="input-i" name="indevent" required>
+            <option value="FALL GUYS">FALL GUYS</option>
+            <option value="BOT HOCKEY">BOT HOCKEY</option>
+            <option value="QUIZ">QUIZ</option>
+            <option value="ANCIENT">ANCIENT</option>
+          </select>
+        </div>
+      <div class="button">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>

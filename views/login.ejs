@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Login</div>
+
+    <ul>
+      <% if(messages.success_msg) { %>
+        <li>
+          <%= messages.success_msg %>
+        </li>
+      <% } %>
+    </ul>
+
+    <ul>
+      <% if (messages.error) { %>
+        <li>
+          <%= messages.error %>
+        </li>
+      <% } %>
+    </ul>
+
+    <form action="/login" method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <label for="username"><span class="details">Username</span></label>
+          <input class="input" type="username" placeholder="Enter your username" name="username" required>
+        </div>
+        <div class="input-box">
+          <label for="password"><span class="details">Password</span></label>
+          <input class="input" type="password" placeholder="Enter your password" name="password" required>
+        </div>
+        <div class="button">
+          <input type="submit" value="Login">
+        </div>
+    </form>
+  </div>
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>

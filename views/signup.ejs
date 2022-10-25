@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma</title>
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Sign Up</div>
+    <ul>
+      <% if(typeof errors !='undefined' ) { %>
+        <% errors.forEach(error=>{ %>
+          <li>
+            <%= error.message %>
+          </li>
+          <% }) %>
+            <% } %>
+    </ul>
+    <form action="/signup" method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <label for="name"><span class="details">Full Name</span></label>
+          <input class="input" type="text" placeholder="Enter your name" name="name" required>
+        </div>
+        <div class="input-box">
+          <label for="email"><span class="details">Email</span></label>
+          <input class="input" type="email" placeholder="Enter your email" name="email" required>
+        </div>
+        <div class="input-box">
+          <label for="username"><span class="details">Username</span></label>
+          <input class="input" type="text" placeholder="Enter your username" name="username" required>
+        </div>
+        <div class="input-box">
+          <label for="password"><span class="details">Password</span></label>
+          <input class="input" type="password" placeholder="Enter your password" name="password" required>
+        </div>
+        <div class="input-box">
+          <label for="password2"><span class="details">Confirm Password</span></label>
+          <input class="input" type="password" placeholder="Re-Enter your password" name="password2" required>
+        </div>
+        <div class="input-box">
+          <label for="pincode"><span class="details">Pin Code</span></label>
+          <input class="input" type="tel" placeholder="Enter your pin code" name="pincode" required>
+        </div>
+        <div class="input-box">
+          <label for="city"><span class="details">City</span></label>
+          <input class="input" type="text" placeholder="Enter your city" name="city" required>
+        </div>
+        <div class="input-box">
+          <label for="insti"><span class="details">Institute Name</span></label>
+          <input class="input" type="text" placeholder="Enter your institute name" name="insti" required>
+        </div>
+        <div class="input-box">
+          <label for="yos"><span class="details">Choose Year of Study: </span></label>
+          <select class="input-i" name="yos" required>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+            <option value="5th Year">5th Year</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="gender"><span class="details">Gender:</span></label>
+          <select class="input-i" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="phno"><span class="details">Phone Number</span></label>
+          <input class="input" type="tel" placeholder="Enter your phone no" name="phno" required>
+        </div>
+        <div class="input-box">
+          <label for="wapp"><span class="details">WhatsApp Number</span></label>
+          <input class="input" type="tel" placeholder="Enter your whatsapp no" name="wapp" required>
+        </div>
+        <div class="input-box">
+          <label for="insta"><span class="details">Instagram</span></label>
+          <input class="input-i" type="url" placeholder="Enter your instagram link" name="insta">
+        </div>
+        <div class="input-box">
+          <label for="fb"><span class="details">Facebook</span></label>
+          <input class="input-i" type="url" placeholder="Enter your facebook link" name="fb">
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Register">
+      </div>
+      <div class="login-anchor">
+        <p>If already a user, <a href="/login"><span>Login</span></a></p>
+      </div>
+    </form>
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>
